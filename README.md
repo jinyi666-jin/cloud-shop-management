@@ -31,12 +31,27 @@
 - Node.js 18+
 - MySQL 8.0+
 
+### 环境变量配置
+
+创建 `.env` 文件（参考 `.env.example`）：
+
+```bash
+# 数据库密码
+DB_PASSWORD=your_database_password
+
+# JWT 密钥
+JWT_SECRET=your_jwt_secret_key
+
+# DeepSeek API 密钥（从 https://platform.deepseek.com/ 获取）
+DEEPSEEK_API_KEY=your_deepseek_api_key
+```
+
 ### 后端启动
 
 ```bash
 cd backend
-# 配置数据库连接 (application.yml)
 # 创建数据库 cloud_shop
+# 设置环境变量或创建 .env 文件
 mvn spring-boot:run
 ```
 
